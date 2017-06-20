@@ -17,6 +17,10 @@ public class App {
 		Gson gson = new Gson();
 		String json = gson.toJson(staff);
 		System.out.println(json);
+		
+		Staff staff2 = gson.fromJson(json, Staff.class);
+		
+		System.out.println(staff2);
 	}
 	
 	private static Staff createDummyObject(){
